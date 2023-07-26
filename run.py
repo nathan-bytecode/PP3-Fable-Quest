@@ -33,4 +33,14 @@ except ValueError:
     name == 'Flynn'
 finally:
     ### finally keyword exceutes the program regardless if there's an error or not
-    print("Long ago....")
+
+    ### Background story with the usage of an f-string for the user's name
+    print("Long ago in the land of Albion a hero once held in high honor")
+    print("who desired more power and was drawn to the dark side.")
+    print("This fallen hero known as Arbitar went to Forbidden Mountain")
+    print("and removed the Sword of the Ancients by defeating the order known as The Hero's Guild.")
+    print("Through Arbitar's actions he released the creatures of havoc in the forms of orcs and trolls.")
+    print("Arbitar has set up camp all the way to the top of Forbidden Mountain.")
+    print(f"Now you hero {answer}, must defeat Arbitar's army")
+    print("of bandits, orcs and trolls and restore the Sword of the Ancients back to its rightful place.")
+    print("Choose your path wisely hero")
