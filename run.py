@@ -98,7 +98,7 @@ def crossroads():
         Inn()
 
     elif go =="forward":
-        print("You go forward to more battles.")
+        print("The difficulty has just gotten harder hero, multiple groups of enemies joined together are ahead. Choose the effective weapons for each attack wisely.")
         stage_four()
 
 def inn():
@@ -112,15 +112,47 @@ def inn():
             print ("Bow: effective agansit bandits who weild daggers.")
             print("Staff: effective agansit trolls who weild spears.")
         elif decide == "leave":
-            print("You leave the Inn. Get ready for what lies ahead!")
-            return
+            print("You leave the Inn. The difficulty has just gotten harder hero, multiple groups of enemies joined together are ahead. Choose the effective weapons for each attack wisely.\n")
+            stage_four()
         else:
             raise ValueError
 
     except ValueError:
             print("Invalid answer. Try again!")
             inn()
-   
+
+def stage_four():
+    print("You encounter a group of bandits and trolls.")
+    print("They trolls first attack, then the bandits.")
+    print("what order of weapons do you use? \n")
+    try:
+        weapon = input("[sword then staff/ staff then sword/ sword then bow/ bow then sword / staff then bow / bow then staff?]\n")
+
+        if weapon == "sword then staff":
+            print("Defeat. Return to the Inn.")
+            inn()
+        elif weapon == "staff then sword":
+            print("Defeat. Return to the Inn.")
+            inn()
+        elif weapon == "sword then bow":
+            print("Defeat. Return to the Inn.")
+            inn()
+        elif weapon == "bow then sword":
+            print("Defeat. Return to the Inn.")
+            inn()
+        elif weapon == "staff then bow":
+            print("Victory! Move forward hero!")
+        elif weapon == "bow then staff":
+            print("Defeat. Return to the Inn.")
+            inn()
+            
+        else:
+            raise ValueError
+
+    except ValueError:
+            print("Invalid answer. Try again!")
+            stage_four()
+
 ### Welcome message
 print("Welcome to Fable Quest, an adventure text based game.")
 print("To win, you must select the correct weapons to use.")
@@ -173,8 +205,4 @@ stage_two()
 stage_three()
 crossroads()
 inn()
-
-
-
-    
-
+stage_four()
