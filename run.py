@@ -250,7 +250,26 @@ def stage_seven():
     except ValueError:
         print("Invalid answer. Try again!")
         stage_seven()
-   
+
+def stage_eight():
+    try:
+        weapon = input("Arbitar attacks in the form of a spear, what weapon do you use? [sword, bow or staff]\n")
+
+        if weapon == "sword":
+            print("Wrong move! You are defeated! Return to the Inn.")
+            inn()
+        elif weapon == "bow":
+            print("Wrong move! You are defeated! Return to the Inn.")
+            inn()
+        elif weapon == "staff":
+            print("Correct move! Incoming next attack!")
+            stage_nine()
+        else:
+            raise ValueError
+
+    except ValueError:
+        print("Invalid answer. Try again!")
+        stage_eight()
 
  
 ### Welcome message
@@ -309,3 +328,5 @@ stage_four()
 stage_five()
 stage_six()
 mid_story()
+stage_seven()
+stage_eight()
