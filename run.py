@@ -4,19 +4,39 @@ weapon = ""
 
 ### Functions go on outer level to later be called upon
 def training():
-    if (choice == "yes"):
+    if choice == "yes":
         weapon = input("Choose weapon: [sword/bow/staff]\n")
-        if (weapon == "sword"):
+        
+        if weapon == "sword":
             print("Sword: effective aganist orcs who weild hammers")
-            print("Do you want to learn about another weapon? [yes/no]")
-        elif ( weapon == "bow"):
+            weapon = input("Do you want to learn about another weapon? [yes/no]\n")
+            if weapon == "yes": 
+                training()
+            elif weapon == "no":
+                print("I hope you've learned each weapon for what lies ahead!")
+    
+        elif weapon == "bow":
             print ("Bow: effective agansit bandits who weild daggers")
-            print("Do you want to learn about another weapon? [yes/no]")
-        elif ( weapon == "staff"):
-            print ("Staff: effective agansit trolls who weild spears")
-            print("Do you want to learn about another weapon? [yes/no]")
+            weapon = input("Do you want to learn about another weapon? [yes/no]\n")
+            if weapon == "yes":
+                training()
+            elif weapon == "no":
+                print("I hope you've learned each weapon for what lies ahead!")
+        elif weapon == "staff":
+            print("Staff: effective agansit trolls who weild spears")
+            weapon = input("Do you want to learn about another weapon? [yes/no]\n")
+            if weapon == "yes":
+                training()
+            elif weapon == "no":
+                print("I hope you've learned each weapon for what lies ahead!")
+        
+        if not weapon == "sword" "bow" "staff":
+            print("Try again")
+            training()
     else:
-        print("Invalid")
+        print("Get ready for battle!")
+   
+        
 
 ### Welcome message
 print("Welcome to Fable Quest, an adventure text based game.")
@@ -37,8 +57,8 @@ else:
     ### If neither "yes" or "no", print invalid answer message
     print("Invalid answer. Try again running the program again.")
     quit()
+    ### All answer input outcomes have been tested to ensure user experience
 
-### All answer input outcomes have been tested to ensure user experience
 try:
     if answer == "":
         ### If user gives an empty string, I have assigned a default name
@@ -65,3 +85,4 @@ finally:
 print("Would you like to train at The Hero's Guild before leaving for your conquest? [yes/no]")
 choice = input("> ")
 training()
+
