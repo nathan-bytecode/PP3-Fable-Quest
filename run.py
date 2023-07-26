@@ -271,6 +271,25 @@ def stage_eight():
         print("Invalid answer. Try again!")
         stage_eight()
 
+def stage_nine():
+    try:
+        weapon = input("Arbitar attacks in the form of a hammer, what weapon do you use? [sword, bow or staff]\n")
+
+        if weapon == "sword":
+            print("Correct move! Arbitar is defeated!")
+            final_story()
+        elif weapon == "bow":
+            print("Wrong move! You are defeated! Return to the Inn.")
+            inn()
+        elif weapon == "staff":
+            print("Wrong move! You are defeated! Return to the Inn.")
+            inn()
+        else:
+            raise ValueError
+
+    except ValueError:
+        print("Invalid answer. Try again!")
+        stage_nine()
  
 ### Welcome message
 print("Welcome to Fable Quest, an adventure text based game.")
@@ -330,3 +349,4 @@ stage_six()
 mid_story()
 stage_seven()
 stage_eight()
+stage_nine()
