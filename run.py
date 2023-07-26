@@ -34,58 +34,72 @@ def training():
         return
 
 def stage_one():
-            try:
-                weapon = input("You encounter a group of orcs, what weapon do you use? [sword, bow or staff]\n")
+    try:
+        weapon = input("You encounter a group of orcs, what weapon do you use? [sword, bow or staff]\n")
 
-                if weapon == "sword":
-                   print("Victory! A sword is effective agansit orcs! Move forward hero!")
-                elif weapon == "bow":
-                    print("Game over. Orcs weild hammers. You get smashed.")
-                elif weapon == "staff":
-                    print("Game over. Orcs weild hammers. You get smashed.")
-                    return
-                else:
-                    raise ValueError
+        if weapon == "sword":
+            print("Victory! A sword is effective agansit orcs! Move forward hero!")
+        elif weapon == "bow":
+            print("Game over. Orcs weild hammers. You get smashed.")
+        elif weapon == "staff":
+            print("Game over. Orcs weild hammers. You get smashed.")
+            return
+        else:
+            raise ValueError
 
-            except ValueError:
-                print("Invalid answer. Try again!")
-                stage_one()
+    except ValueError:
+        print("Invalid answer. Try again!")
+        stage_one()
 
 def stage_two():
-            try:
-                weapon = input("You encounter a group of trolls, what weapon do you use? [sword, bow or staff]\n")
+    try:
+        weapon = input("You encounter a group of trolls, what weapon do you use? [sword, bow or staff]\n")
 
-                if weapon == "sword":
-                   print("Game over. Trolls weild spears. You get peirced.")
-                elif weapon == "bow":
-                    print("Game over. Trolls weild spears. You get peirced.")
-                elif weapon == "staff":
-                    print("Victory! A staff is effective agansit trolls! Move forward hero!")
-                    return
-                else:
-                    raise ValueError
+        if weapon == "sword":
+            print("Game over. Trolls weild spears. You get peirced.")
+        elif weapon == "bow":
+            print("Game over. Trolls weild spears. You get peirced.")
+        elif weapon == "staff":
+            print("Victory! A staff is effective agansit trolls! Move forward hero!")
+            return
+        else:
+            raise ValueError
 
-            except ValueError:
-                print("Invalid answer. Try again!")
-                stage_two()
+    except ValueError:
+        print("Invalid answer. Try again!")
+        stage_two()
 
 def stage_three():
-            try:
-                weapon = input("You encounter a group of trolls, what weapon do you use? [sword, bow or staff]\n")
+    try:
+        weapon = input("You encounter a group of bandits, what weapon do you use? [sword, bow or staff]\n")
 
-                if weapon == "sword":
-                   print("Game over. Trolls weild spears. You get peirced.")
-                elif weapon == "bow":
-                    print("Game over. Trolls weild spears. You get peirced.")
-                elif weapon == "staff":
-                    print("Victory! A staff is effective agansit trolls! Move forward hero!")
-                    return
-                else:
-                    raise ValueError
+        if weapon == "sword":
+            print("Game over. Bandits weild daggers. You get sliced.")
+        elif weapon == "bow":
+            print("Victory! A bow with arrows are effective agansit bandits! Move forward hero!\n")
+        elif weapon == "staff":
+            print("Game over. Bandits weild daggers. You get sliced.")
+            return
+        else:
+            raise ValueError
 
-            except ValueError:
-                print("Invalid answer. Try again!")
-                stage_two()
+    except ValueError:
+            print("Invalid answer. Try again!")
+            stage_three()
+
+def crossroads():
+    go = input("You come to a cross roads mid way up Forbidden Mountain, do you go back for more glory? Go right to rest at the Inn? Or go forward to more difficult battles? [back, right, forward]\n")
+    if go == "back":
+        print("You go back.")
+        stage_three()
+
+    elif go == "rest":
+        print("You decided to rest at an Inn.")
+        Inn()
+
+    elif go =="forward":
+        print("You go forward to more battles.")
+        stage_four()
 
    
 ### Welcome message
@@ -137,4 +151,5 @@ choice = input("> ")
 training()
 stage_one()
 stage_two()
-
+stage_three()
+crossroads()
