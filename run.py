@@ -34,13 +34,22 @@ def training():
         return
 
 def stage_one():
-    weapon = input("You encounter a group of orcs, what weapon do you use? [sword, bow or staff]\n")
-    if weapon == "sword":
-        print("Victory! A sword is effective agansit orcs! Move forward hero!")
-    elif weapon == "bow":
-        print("Game over. Orcs weild hammers.")
-    elif weapon == "staff":
-        print("Game over. Orcs weild hammers.")
+            try:
+                weapon = input("You encounter a group of orcs, what weapon do you use? [sword, bow or staff]\n")
+
+                if weapon == "sword":
+                   print("Victory! A sword is effective agansit orcs! Move forward hero!")
+                elif weapon == "bow":
+                    print("Game over. Orcs weild hammers. You get smashed.")
+                elif weapon == "staff":
+                    print("Game over. Orcs weild hammers. You get smashed.")
+                    return
+                else:
+                    raise ValueError
+
+            except ValueError:
+                print("Invalid answer. Try again!")
+                stage_one()
 
    
 ### Welcome message
