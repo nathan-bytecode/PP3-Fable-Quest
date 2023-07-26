@@ -228,7 +228,28 @@ def mid_story():
     print("Hahaha do not make me laugh!")
     print("With the Sword of the Ancients I can easily shapeshift my weapon to any of my choosing!")
     print("Prepare to taste my blade!")
+    stage_seven()
 
+def stage_seven():
+    print("Arbitar releases a relentless flurry of attacks! All your expeience has amounted to this battle! Choose wisely hero!")
+    try:
+        weapon = input("Arbitar attacks in the form of a dagger, what weapon do you use? [sword, bow or staff]\n")
+
+        if weapon == "sword":
+            print("Wrong move! You are defeated! Return to the Inn.")
+            inn()
+        elif weapon == "bow":
+            print("Correct move! Incoming next attack!")
+            stage_eight()
+        elif weapon == "staff":
+            print("Wrong move! You are defeated! Return to the Inn.")
+            inn()
+        else:
+            raise ValueError
+
+    except ValueError:
+        print("Invalid answer. Try again!")
+        stage_seven()
    
 
  
