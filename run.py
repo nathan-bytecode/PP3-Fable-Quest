@@ -290,7 +290,33 @@ def stage_nine():
     except ValueError:
         print("Invalid answer. Try again!")
         stage_nine()
- 
+
+def final_story():
+    print("Arbitar: How can this be? A new champion has emerged! Have mercy on me champion of Albion!")
+    print("You have a moral decision now to make hero. Do you swing the final blow and rid Albion of Arbitar?")
+    print("Or do you have mercy and let him live?")
+
+    try:
+        action = input ("[final blow/ have mercy]\n")
+
+        if action == "final blow":
+            print("You have taken the more sinister way by executing Arbitar, darkness has entered your heart.")
+            print("You steal the Sword of the Ancients for yourself but cannot control its power.")
+            print("You take your final breath and lose the right to be known as a champion of Albian. You lose. Game over")
+        elif action == "have mercy":
+            print("You have banished Arbitar and showed kindness.")
+            print("Now because you are not corrupted by bloodshed, you can rightfully restore the Sword of the Ancients.")
+            print("Congratulations champion of Albian!")
+            print("The land is a safe place to dwell again and the reputation of The Hero's Guild has been restored. Game won!")
+        else:
+            raise ValueError
+    
+    except ValueError:
+        print("Invalid answer. Try again!")
+        final_story()
+
+    
+
 ### Welcome message
 print("Welcome to Fable Quest, an adventure text based game.")
 print("To win, you must select the correct weapons to use.")
@@ -350,3 +376,4 @@ mid_story()
 stage_seven()
 stage_eight()
 stage_nine()
+final_story()
