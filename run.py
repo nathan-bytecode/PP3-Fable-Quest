@@ -38,7 +38,7 @@ def stage_one():
         weapon = input("You encounter a group of orcs, what weapon do you use? [sword, bow or staff]\n")
 
         if weapon == "sword":
-            print("Victory! A sword is effective agansit orcs! Move forward hero!")
+            print("Victory! A sword is effective agansit orcs! Move forward hero!\n")
         elif weapon == "bow":
             print("Game over. Orcs weild hammers. You get smashed.")
         elif weapon == "staff":
@@ -60,7 +60,7 @@ def stage_two():
         elif weapon == "bow":
             print("Game over. Trolls weild spears. You get peirced.")
         elif weapon == "staff":
-            print("Victory! A staff is effective agansit trolls! Move forward hero!")
+            print("Victory! A staff is effective agansit trolls! Move forward hero!\n")
             return
         else:
             raise ValueError
@@ -90,7 +90,7 @@ def stage_three():
 def crossroads():
     go = input("You come to a cross roads mid way up Forbidden Mountain, do you go back for more glory? Go right to rest at the Inn? Or go forward to more difficult battles? [back, right, forward]\n")
     if go == "back":
-        print("You go back.")
+        print("You go back./n")
         stage_three()
 
     elif go == "rest":
@@ -98,19 +98,19 @@ def crossroads():
         Inn()
 
     elif go =="forward":
-        print("The difficulty has just gotten harder hero, multiple groups of enemies joined together are ahead. Choose the effective weapons for each attack wisely.")
-        stage_five()
+        print("The difficulty has just gotten harder hero, multiple groups of enemies joined together are ahead. Choose the effective weapons for each attack wisely.\n")
+        stage_four()
 
 def inn():
     try:
         decide = input("You arrive at an Inn. After a hard days battle, will you rest? Look at the training manual? Or leave? [rest/look/leave]\n")
         if decide == "rest":
-            print("You sleep through the night and wake up well replenished.")
+            print("You sleep through the night and wake up well replenished./n")
         elif decide == "look":
             print("You open up the training manual to refresh your battle strategy.")
             print("Sword: effective aganist orcs who weild hammers.")
             print ("Bow: effective agansit bandits who weild daggers.")
-            print("Staff: effective agansit trolls who weild spears.")
+            print("Staff: effective agansit trolls who weild spears./n")
         elif decide == "leave":
             print("You leave the Inn. The difficulty has just gotten harder hero, multiple groups of enemies joined together are ahead. Choose the effective weapons for each attack wisely.\n")
             stage_four()
@@ -141,7 +141,8 @@ def stage_four():
             print("Defeat. Return to the Inn.")
             inn()
         elif weapon == "staff then bow":
-            print("Victory! Move forward hero!")
+            print("Victory! Move forward hero!\n")
+            stage_five()
         elif weapon == "bow then staff":
             print("Defeat. Return to the Inn.")
             inn()
@@ -161,7 +162,8 @@ def stage_five():
         weapon = input("[sword then staff/ staff then sword/ sword then bow/ bow then sword / staff then bow / bow then staff?]\n")
 
         if weapon == "sword then staff":
-            print("Victory! Move forward hero!")
+            print("Victory! Move forward hero!\n")
+            stage_six()
         elif weapon == "staff then sword":
             print("Defeat. Return to the Inn.")
             inn()
@@ -202,7 +204,7 @@ def stage_six():
             print("Defeat. Return to the Inn.")
             inn()
         elif weapon == "bow then sword":
-            print("Victory! Move forward hero!")
+            print("Victory! Move forward hero!\n")
             mid_story()
         elif weapon == "staff then bow":
             print("Defeat. Return to the Inn.")
@@ -218,6 +220,16 @@ def stage_six():
             print("Invalid answer. Try again!")
             stage_six()
 
+def mid_story():
+    print(f"Well done hero {answer}!")
+    print("You succesfully made it to the top of Forbidden Mountain by deafting Arbitar's army on the way!")
+    print("Now you must defeat Arbitar!\n")
+    print(f"Arbitar: A hero named {answer} has come to challenge me?!")
+    print("Hahaha do not make me laugh!")
+    print("With the Sword of the Ancients I can easily shapeshift my weapon to any of my choosing!")
+    print("Prepare to taste my blade!")
+
+   
 
  
 ### Welcome message
@@ -249,7 +261,7 @@ try:
         name == answer
 except ValueError:
     print("The mysterious type, ey? OK, I'll call you Flynn!")
-    name == 'Flynn'
+    answer == 'Flynn'
 finally:
     ### finally keyword exceutes the program regardless if there's an error or not
 
@@ -274,3 +286,5 @@ crossroads()
 inn()
 stage_four()
 stage_five()
+stage_six()
+mid_story()
