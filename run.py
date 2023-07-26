@@ -51,6 +51,42 @@ def stage_one():
                 print("Invalid answer. Try again!")
                 stage_one()
 
+def stage_two():
+            try:
+                weapon = input("You encounter a group of trolls, what weapon do you use? [sword, bow or staff]\n")
+
+                if weapon == "sword":
+                   print("Game over. Trolls weild spears. You get peirced.")
+                elif weapon == "bow":
+                    print("Game over. Trolls weild spears. You get peirced.")
+                elif weapon == "staff":
+                    print("Victory! A staff is effective agansit trolls! Move forward hero!")
+                    return
+                else:
+                    raise ValueError
+
+            except ValueError:
+                print("Invalid answer. Try again!")
+                stage_two()
+
+def stage_three():
+            try:
+                weapon = input("You encounter a group of trolls, what weapon do you use? [sword, bow or staff]\n")
+
+                if weapon == "sword":
+                   print("Game over. Trolls weild spears. You get peirced.")
+                elif weapon == "bow":
+                    print("Game over. Trolls weild spears. You get peirced.")
+                elif weapon == "staff":
+                    print("Victory! A staff is effective agansit trolls! Move forward hero!")
+                    return
+                else:
+                    raise ValueError
+
+            except ValueError:
+                print("Invalid answer. Try again!")
+                stage_two()
+
    
 ### Welcome message
 print("Welcome to Fable Quest, an adventure text based game.")
@@ -100,4 +136,5 @@ print("Would you like to train at The Hero's Guild before leaving for your conqu
 choice = input("> ")
 training()
 stage_one()
+stage_two()
 
