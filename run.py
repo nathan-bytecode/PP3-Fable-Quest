@@ -99,7 +99,7 @@ def crossroads():
 
     elif go =="forward":
         print("The difficulty has just gotten harder hero, multiple groups of enemies joined together are ahead. Choose the effective weapons for each attack wisely.")
-        stage_four()
+        stage_five()
 
 def inn():
     try:
@@ -124,7 +124,7 @@ def inn():
 def stage_four():
     print("You encounter a group of bandits and trolls.")
     print("They trolls first attack, then the bandits.")
-    print("what order of weapons do you use? \n")
+    print("What order of weapons do you use? \n")
     try:
         weapon = input("[sword then staff/ staff then sword/ sword then bow/ bow then sword / staff then bow / bow then staff?]\n")
 
@@ -142,6 +142,38 @@ def stage_four():
             inn()
         elif weapon == "staff then bow":
             print("Victory! Move forward hero!")
+        elif weapon == "bow then staff":
+            print("Defeat. Return to the Inn.")
+            inn()
+            
+        else:
+            raise ValueError
+
+    except ValueError:
+            print("Invalid answer. Try again!")
+            stage_four()
+
+def stage_five():
+    print("You encounter a group of orcs and trolls.")
+    print("They orcs first attack, then the trolls.")
+    print("What order of weapons do you use? \n")
+    try:
+        weapon = input("[sword then staff/ staff then sword/ sword then bow/ bow then sword / staff then bow / bow then staff?]\n")
+
+        if weapon == "sword then staff":
+            print("Victory! Move forward hero!")
+        elif weapon == "staff then sword":
+            print("Defeat. Return to the Inn.")
+            inn()
+        elif weapon == "sword then bow":
+            print("Defeat. Return to the Inn.")
+            inn()
+        elif weapon == "bow then sword":
+            print("Defeat. Return to the Inn.")
+            inn()
+        elif weapon == "staff then bow":
+            print("Defeat. Return to the Inn.")
+            inn()
         elif weapon == "bow then staff":
             print("Defeat. Return to the Inn.")
             inn()
@@ -206,3 +238,4 @@ stage_three()
 crossroads()
 inn()
 stage_four()
+stage_five()
