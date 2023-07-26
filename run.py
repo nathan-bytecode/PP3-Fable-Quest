@@ -12,13 +12,13 @@ def training():
                 weapon = weapon.lower().strip()
         
                 if weapon == "sword":
-                    print("Sword: effective aganist orcs who weild hammers")
+                    print("Sword: effective aganist orcs who weild hammers.")
                     weapon = input("Do you want to learn about another weapon? [yes/no]\n")
                 elif weapon == "bow":
-                    print ("Bow: effective agansit bandits who weild daggers")
+                    print ("Bow: effective agansit bandits who weild daggers.")
                     weapon = input("Do you want to learn about another weapon? [yes/no]\n")
                 elif weapon == "staff":
-                    print("Staff: effective agansit trolls who weild spears")
+                    print("Staff: effective agansit trolls who weild spears.")
                     weapon = input("Do you want to learn about another weapon? [yes/no]\n")
                 elif weapon == "no":
                     print("I hope you've learned each weapon for what lies ahead!")
@@ -101,6 +101,25 @@ def crossroads():
         print("You go forward to more battles.")
         stage_four()
 
+def inn():
+    try:
+        decide = input("You arrive at an Inn. After a hard days battle, will you rest? Look at the training manual? Or leave? [rest/look/leave]\n")
+        if decide == "rest":
+            print("You sleep through the night and wake up well replenished.")
+        elif decide == "look":
+            print("You open up the training manual to refresh your battle strategy.")
+            print("Sword: effective aganist orcs who weild hammers.")
+            print ("Bow: effective agansit bandits who weild daggers.")
+            print("Staff: effective agansit trolls who weild spears.")
+        elif decide == "leave":
+            print("You leave the Inn. Get ready for what lies ahead!")
+            return
+        else:
+            raise ValueError
+
+    except ValueError:
+            print("Invalid answer. Try again!")
+            inn()
    
 ### Welcome message
 print("Welcome to Fable Quest, an adventure text based game.")
@@ -153,3 +172,9 @@ stage_one()
 stage_two()
 stage_three()
 crossroads()
+inn()
+
+
+
+    
+
