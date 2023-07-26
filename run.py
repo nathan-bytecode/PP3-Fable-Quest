@@ -5,39 +5,44 @@ weapon = ""
 ### Functions go on outer level to later be called upon
 def training():
     if choice == "yes":
-        weapon = input("Choose weapon: [sword/bow/staff]\n")
+        weapon = ""
+        while weapon != "no":
+            try:
+                weapon = input("Choose weapon: [sword/bow/staff]\n")
+                weapon = weapon.lower().strip()
         
-        if weapon == "sword":
-            print("Sword: effective aganist orcs who weild hammers")
-            weapon = input("Do you want to learn about another weapon? [yes/no]\n")
-            if weapon == "yes": 
-                training()
-            elif weapon == "no":
-                print("I hope you've learned each weapon for what lies ahead!")
-    
-        elif weapon == "bow":
-            print ("Bow: effective agansit bandits who weild daggers")
-            weapon = input("Do you want to learn about another weapon? [yes/no]\n")
-            if weapon == "yes":
-                training()
-            elif weapon == "no":
-                print("I hope you've learned each weapon for what lies ahead!")
-        elif weapon == "staff":
-            print("Staff: effective agansit trolls who weild spears")
-            weapon = input("Do you want to learn about another weapon? [yes/no]\n")
-            if weapon == "yes":
-                training()
-            elif weapon == "no":
-                print("I hope you've learned each weapon for what lies ahead!")
-        
-        if not weapon == "sword" "bow" "staff":
-            print("Try again")
-            training()
+                if weapon == "sword":
+                    print("Sword: effective aganist orcs who weild hammers")
+                    weapon = input("Do you want to learn about another weapon? [yes/no]\n")
+                elif weapon == "bow":
+                    print ("Bow: effective agansit bandits who weild daggers")
+                    weapon = input("Do you want to learn about another weapon? [yes/no]\n")
+                elif weapon == "staff":
+                    print("Staff: effective agansit trolls who weild spears")
+                    weapon = input("Do you want to learn about another weapon? [yes/no]\n")
+                elif weapon == "no":
+                    print("I hope you've learned each weapon for what lies ahead!")
+                    print("Get ready for battle!")
+                    return
+                else:
+                    raise ValueError
+
+            except ValueError:
+                print("Invalid answer. Try again!")
     else:
         print("Get ready for battle!")
-   
-        
+        return
 
+def stage_one():
+    weapon = input("You encounter a group of orcs, what weapon do you use? [sword, bow or staff]\n")
+    if weapon == "sword":
+        print("Victory! A sword is effective agansit orcs! Move forward hero!")
+    elif weapon == "bow":
+        print("Game over. Orcs weild hammers.")
+    elif weapon == "staff":
+        print("Game over. Orcs weild hammers.")
+
+   
 ### Welcome message
 print("Welcome to Fable Quest, an adventure text based game.")
 print("To win, you must select the correct weapons to use.")
@@ -85,4 +90,5 @@ finally:
 print("Would you like to train at The Hero's Guild before leaving for your conquest? [yes/no]")
 choice = input("> ")
 training()
+stage_one()
 
