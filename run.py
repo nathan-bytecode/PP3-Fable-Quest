@@ -1,3 +1,6 @@
+### Global varibales defined
+name = ""
+
 ### Welcome message
 print("Welcome to Fable Quest, an adventure text based game.")
 print("To win, you must select the correct weapons to use.")
@@ -18,4 +21,16 @@ else:
     print("Invalid answer. Try again running the program again.")
     quit()
 
-### All outcomes have been tested to ensure user experience
+### All answer input outcomes have been tested to ensure user experience
+try:
+    if answer == "":
+        ### If user gives an empty string, I have assigned a default name
+        raise ValueError
+    else:
+        name == answer
+except ValueError:
+    print("The mysterious type, ey? OK, I'll call you Flynn!")
+    name == 'Flynn'
+finally:
+    ### finally keyword exceutes the program regardless if there's an error or not
+    print("Long ago....")
