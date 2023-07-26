@@ -1,5 +1,22 @@
 ### Global varibales defined
 name = ""
+weapon = ""
+
+### Functions go on outer level to later be called upon
+def training():
+    if (choice == "yes"):
+        weapon = input("Choose weapon: [sword/bow/staff]\n")
+        if (weapon == "sword"):
+            print("Sword: effective aganist orcs who weild hammers")
+            print("Do you want to learn about another weapon? [yes/no]")
+        elif ( weapon == "bow"):
+            print ("Bow: effective agansit bandits who weild daggers")
+            print("Do you want to learn about another weapon? [yes/no]")
+        elif ( weapon == "staff"):
+            print ("Staff: effective agansit trolls who weild spears")
+            print("Do you want to learn about another weapon? [yes/no]")
+    else:
+        print("Invalid")
 
 ### Welcome message
 print("Welcome to Fable Quest, an adventure text based game.")
@@ -43,4 +60,8 @@ finally:
     print("Arbitar has set up camp all the way to the top of Forbidden Mountain.")
     print(f"Now you hero {answer}, must defeat Arbitar's army")
     print("of bandits, orcs and trolls and restore the Sword of the Ancients back to its rightful place.")
-    print("Choose your path wisely hero")
+    print("Choose your path wisely hero.\n")
+
+print("Would you like to train at The Hero's Guild before leaving for your conquest? [yes/no]")
+choice = input("> ")
+training()
