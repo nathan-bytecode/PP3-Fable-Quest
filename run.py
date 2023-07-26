@@ -183,8 +183,43 @@ def stage_five():
 
     except ValueError:
             print("Invalid answer. Try again!")
-            stage_four()
+            stage_five()
 
+def stage_six():
+    print("You encounter a group of bandits and orcs.")
+    print("They bandits first attack, then the orcs.")
+    print("What order of weapons do you use? \n")
+    try:
+        weapon = input("[sword then staff/ staff then sword/ sword then bow/ bow then sword / staff then bow / bow then staff?]\n")
+
+        if weapon == "sword then staff":
+            print("Defeat. Return to the Inn.")
+            inn()
+        elif weapon == "staff then sword":
+            print("Defeat. Return to the Inn.")
+            inn()
+        elif weapon == "sword then bow":
+            print("Defeat. Return to the Inn.")
+            inn()
+        elif weapon == "bow then sword":
+            print("Victory! Move forward hero!")
+            mid_story()
+        elif weapon == "staff then bow":
+            print("Defeat. Return to the Inn.")
+            inn()
+        elif weapon == "bow then staff":
+            print("Defeat. Return to the Inn.")
+            inn()
+            
+        else:
+            raise ValueError
+
+    except ValueError:
+            print("Invalid answer. Try again!")
+            stage_six()
+
+
+ 
 ### Welcome message
 print("Welcome to Fable Quest, an adventure text based game.")
 print("To win, you must select the correct weapons to use.")
