@@ -1,8 +1,241 @@
+# Importing the libary
 import sys
+import pyfiglet
 
 # Global varibales defined
 name = ""
 weapon = ""
+# ASCII Art
+sword_art = """     (Sword)                            ___
+                                                      |_  |
+                                                        | |
+__                      ____                            | |
+\ ````''''----....____.'\   ````''''--------------------| |--.               _____      .-.
+ :.                      `-._                           | |   `''-----''''```     ``''|`: :|
+  '::.                       `'--.._____________________| |                           | : :|
+    '::..       ----....._______________________________| |                           | : :|
+      `'-::...__________________________________________| |   .-''-..-'`-..-'`-..-''-.cjr :|
+           ```'''---------------------------------------| |--'                         `'-'
+                                                        | |
+                                                       _| |
+                                                      |___| cjr
+"""
+bow_art = """        (Bow and arrow)                           
+           4   ".                                        
+           4    ^.                                       
+           4     $                                       
+           4     'b                                      
+           4      "b.                                    
+           4        $                                    
+           4        $r                                   
+           4        $F                                   
+-$b========4========$b====*P=-                           
+           4       *$$F                                  
+           4        $$"                                  
+           4       .$F                                   
+           4       dP                                    
+           4      F                                      
+           4     @                                       
+           4    .                                        
+           J.                                            
+          '$$    
+"""
+staff_art = """   (Staff)
+       /\
+      //\\
+     //  \\
+ ^   \\  //   ^
+/ \   )  (   / \
+) (   )  (   ) (
+\  \_/ /\ \_/  /
+ \__  _)(_  __/
+    \ \  / /
+     ) \/ (
+     | /\ |
+     | )( |
+     | )( |
+     | \/ |
+     )____(
+    /      \
+    \______/
+"""
+bandits_art = """   (Bandit)
+         /\______  __
+        /-~     ,^~ / __n
+       / ,---x /_.-"L/__,\
+      /-".---.\_.-'/!"  \ \
+      0\/0___/   x' /    ) |
+      \.______.-'_.{__.-"_.^
+       `x____,.-",-~( .-"
+          _.-| ,^.-~ "\
+     __.-~_,-|/\/     `i
+    / u.-~ .-{\/     .-^--.
+    \/   v~ ,-^x.____}--r |
+        / /"            | |       
+      _/_/              !_l_
+    o~_//)             (_\\_~o
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"""
+orcs_art = """    (Orc)
+        _____
+    .-,;='';_),-.
+     \_\(),()/_/
+       (,___,)
+      ,-/`~`\-,___
+     / /).:.('--._)
+    {_[ (_,_)
+        | Y |
+       /  |  \
+       """ """ 
+"""
+trolls_art = """    (Troll)
+      __ __
+   .-',,^,,'.
+  / \(0)(0)/ \
+  )/( ,_"_,)\(
+  `  >-`~(   ' 
+_N\ |(`\ |___
+\' |/ \ \/_-,)
+ '.(  \`\_<
+    \ _\|
+     | |_\_
+snd  \_,_>-' 
+"""
+
+sword_of_ancients = """
+/     _____________________|(Sword of the Ancients)|________)
+|     |
+|     |                               /\ 
+|     |                              / |\
+|     |                             / /\ \
+|     |                            / /  \ \
+|     |                           / /    \ \
+|     |                          /_/      \_\
+|     |                          \    '`    /
+|     |                           )   ||   ( 
+|_____|___________________________|_  ||   | 
+|     |                           |   ||   | 
+|     |                           |   ||   | 
+|     |                           |   ||   | 
+|     |                           |   ||   | 
+|     |                           |   ||   | 
+|     |                           |   ||   | 
+|     |                           |   ||   | 
+|     |                           |   ||   | 
+|     |               /           |   ||   |           \
+|     |              /(           |   ||   |           )\
+|     |              |`\_         |   ||   |         _/'|
+|     |              |`. `-._     |   ||   |     _,-' ,'|
+|     |              (   ` . `-._ |  _--_  | _,-' , '   )
+|     |               `|._   ` . `-./.__.\.-' , '   _,-'
+|_____|________________|  `-._   ` | /  \ | '   _,-'
+|     |                       `-._/ |_()_| \_,-'   
+|     |                    ___.-'   ______   `-,
+|     |                   '-----.  |______|   /
+|     |                          \  ______   /
+|_____|__________________________|__\>__  |>     
+|     |                         <|   <   >|      
+|     |                            `.____.'       
+|     |                              V   V        
+|     |                                           
+|     |_____________________________________________________   ________
+ \__________________________________________________________| |________) 
+"""
+
+inn_art = """                 (Inn)
+                                   /\
+                              /\  //\\
+                       /\    //\\///\\\        /\
+                      //\\  ///\////\\\\  /\  //\\
+         /\          /  ^ \/^ ^/^  ^  ^ \/^ \/  ^ \
+        / ^\    /\  / ^   /  ^/ ^ ^ ^   ^\ ^/  ^^  \
+       /^   \  / ^\/ ^ ^   ^ / ^  ^    ^  \/ ^   ^  \       *
+      /  ^ ^ \/^  ^\ ^ ^ ^   ^  ^   ^   ____  ^   ^  \     /|\
+     / ^ ^  ^ \ ^  _\___________________|  |_____^ ^  \   /||o\
+    / ^^  ^ ^ ^\  /______________________________\ ^ ^ \ /|o|||\
+   /  ^  ^^ ^ ^  /________________________________\  ^  /|||||o|\
+  /^ ^  ^ ^^  ^    ||___|___||||||||||||___|__|||      /||o||||||\
+ / ^   ^   ^    ^  ||___|___||||||||||||___|__|||          | |
+/ ^ ^ ^  ^  ^  ^   ||||||||||||||||||||||||||||||oooooooooo| |ooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+"""
+
+arbitar_art = """  (Arbitar)
+                      .
+                  _._ |`,
+                .'\  `"*-.
+               /\/L__.-*' \
+              :.'L:  ._  `.y.
+              /\//.\'  `*-'*+.
+              `:.-.`.  -' ,-. \
+                |`,\;    :`*-._;
+                `._      |   (.L
+                  |':    , .*'  ;
+                  |  `.        /
+                __:  / `-.;  .'
+              .'//  '  (  :`'.-*.-.
+            .' ,/ __..--**"`: .' .'`+.
+          .'   :'" ._.+.+*+".'  /  /|/`.
+        .'     `*"'    _   /   /  / ; / \
+       /\     (,     .' \.' ' ,  : / .   .
+      /\ `.    ;    /  .'  /     ',      |
+      * `-.`-._|_.+:   | .'  ,  /   .    |
+     / `-. `-.L:.`-._ '|/     .'   /     |
+   .' /   `+.__| `-.   '  _.-'    '      |
+  /  :    /    :"..-' /    _.-*'         |
+ /    . .'    / \ \.+'"--*'              |
+:      `.  :"*-*' /: `._.     .'         |
+ `.      \ `;`   :  `-.___.-*'           ;
+   `.   ."`.|`   |                      /
+     `-:   /`.__.:                    .'
+        `.: / .'/|\                  /|
+         /". / . |`\               .' |
+    .+*-:  |:  : :| \            .'   |
+   +--:'   ||  | .:  `.        .'     |
+   `*-._.-*|   |   \  \`+.__.-'       '
+           :   :  . \  `. `.         /
+           .    \    \   `. `*-._   /
+             `  /\ .  `.   `.   .-*:
+            .  :  \     :.   `*-.  :
+             \ |   . `   \`-._      \
+              ;,          \   *-._.',
+             )     .   `  `.      /
+              \          `   `-.  .
+               `.     \   \       |
+"""
+
+hero_art = """
+ 
+              (Champion)
+               _______
+         ..-'`       ````---.
+       .'          ___ .'````.'SS'.
+      /        ..-SS####'.  /SSHH##'.
+     |       .'SSSHHHH##|/#/#HH#H####'.
+    /      .'SSHHHHH####/||#/: \SHH#####\
+   /      /SSHHHHH#####/!||;`___|SSHH###\
+-..__    /SSSHHH######.         \SSSHH###\
+`.'-.''--._SHHH#####.'           '.SH####/
+  '. ``'-  '/SH####`/_             `|H##/
+  | '.     /SSHH###|`'==.       .=='/\H|
+  |   `'-.|SHHHH##/\__\/        /\//|~|/
+  |    |S#|/HHH##/             |``  |
+  |    \H' |H#.'`              \    |
+  |        ''`|               -     /
+  |          /H\          .----    /
+  |         |H#/'.           `    /
+  |          \| | '..            /
+  |    ^~DLF   /|    ''..______.'
+   \          //\__    _..-. | 
+    \         ||   ````     \ |_
+     \    _.-|               \| |_
+     _\_.-'   `'''''-.        |   `--.
+ ''``    \            `''-;    \ /
+          \      .-'|     ````.' -
+          |    .'  `--'''''-.. |/
+          |  .'               \|
+          |.'    
+"""
 
 # Functions go on outer level to later be called upon
 def training():
@@ -14,14 +247,17 @@ def training():
                 weapon = weapon.lower().strip()
                 if weapon == "sword":
                     print("Sword: effective aganist orcs who wield hammers.")
+                    print(sword_art)
                     print("Do you want to learn about another weapon?")
                     weapon = input("[yes/no]\n")
                 elif weapon == "bow":
                     print("Bow: effective agansit bandits who wield daggers.")
+                    print(bow_art)
                     print("Do you want to learn about another weapon?")
                     weapon = input("[yes/no]\n")
                 elif weapon == "staff":
                     print("Staff: effective agansit trolls who wield spears.")
+                    print(staff_art)
                     print("Do you want to learn about another weapon?")
                     weapon = input("[yes/no]\n")
                 elif weapon == "no":
@@ -41,6 +277,7 @@ def training():
 def stage_one():
     try:
         print("You encounter a group of orcs.")
+        print(orcs_art)
         print("What weapon do you use?")
         weapon = input("[sword/bow/staff]\n")
 
@@ -63,6 +300,7 @@ def stage_one():
 def stage_two():
     try:
         print("You encounter a group of trolls.")
+        print(trolls_art)
         print("What weapon do you use?")
         weapon = input("[sword/bow/staff]\n")
 
@@ -85,6 +323,7 @@ def stage_two():
 def stage_three():
     try:
         print("You encounter a group of bandits.")
+        print(bandits_art)
         print("What weapon do you use?")
         weapon = input("[sword/bow/staff]\n")
 
@@ -116,6 +355,7 @@ def crossroads():
 
     elif go == "rest":
         print("You decided to rest at an Inn.")
+        print(inn_art)
         Inn()
 
     elif go == "forward":
@@ -266,9 +506,11 @@ def mid_story():
     print("You have defeated Arbitar's army on the way!")
     print("You successfully made it to the top of Forbidden Mountain")
     print("Now you must defeat Arbitar!")
+    print(arbitar_art)
     print(f"Arbitar: A hero named {answer} has come to challenge me?!")
     print("Hahaha do not make me laugh!")
     print("With the Sword of the Ancients I can easily shapeshift my weapon!")
+    print(sword_of_ancients)
     print("Prepare to taste my blade!")
     stage_seven()
 
@@ -346,6 +588,7 @@ def stage_nine():
 def final_story():
     print("Arbitar: How can this be? A new champion has emerged!")
     print("Have mercy on me O' Champion of Albion!")
+    print(hero_art)
     print("You have a moral decision now to make hero.")
     print("Do you swing the final blow and rid Albion of Arbitar?")
     print("Or do you have mercy and let him live?")
@@ -405,8 +648,8 @@ try:
     else:
         name == answer
 except ValueError:
-    print("The mysterious type, ey? OK, I'll call you Flynn!")
-    answer == 'Flynn'
+    print("The mysterious type, ey? OK, I'll call you Cloud!")
+    answer == 'Cloud'
 finally:
     # finally keyword runs the program regardless if there's an error or not
 
