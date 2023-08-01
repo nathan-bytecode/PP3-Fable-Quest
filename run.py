@@ -1,7 +1,8 @@
+import sys
+
 # Global varibales defined
 name = ""
 weapon = ""
-
 
 # Functions go on outer level to later be called upon
 def training():
@@ -41,7 +42,7 @@ def stage_one():
     try:
         print("You encounter a group of orcs.")
         print("What weapon do you use?")
-        weapon = input([sword, bow or staff]\n")
+        weapon = input("[sword, bow or staff]\n")
 
         if weapon == "sword":
             print("Victory! A sword is effective agansit orcs!")
@@ -63,7 +64,7 @@ def stage_two():
     try:
         print("You encounter a group of trolls.")
         print("What weapon do you use?")
-        weapon = input([sword, bow or staff]\n")
+        weapon = input("[sword, bow or staff]\n")
 
         if weapon == "sword":
             print("Game over. Trolls weild spears. You get peirced.")
@@ -85,7 +86,7 @@ def stage_three():
     try:
         print("You encounter a group of bandits.")
         print("What weapon do you use?")
-        weapon = input([sword, bow or staff]\n")
+        weapon = input("[sword, bow or staff]\n")
 
         if weapon == "sword":
             print("Game over. Bandits weild daggers. You get sliced.")
@@ -119,7 +120,7 @@ def crossroads():
 
     elif go == "forward":
         print("The difficulty has just gotten harder hero.")
-        print("Multiple groups of enemies joined together are ahead.)
+        print("Multiple groups of enemies joined together are ahead.")
         print("Choose the effective weapons for each attack wisely.")
         stage_four()
 
@@ -140,7 +141,7 @@ def inn():
             print("Staff: effective agansit trolls who weild spears./n")
         elif decide == "leave":
             print("The difficulty has just gotten harder hero.")
-            print("Multiple groups of enemies joined together are ahead.)
+            print("Multiple groups of enemies joined together are ahead.")
             print("Choose the effective weapons for each attack wisely.")
             stage_four()
 
@@ -386,7 +387,7 @@ if (answer.lower().strip() == "yes"):
 elif (answer == "no"):
     # If "no", print goodbye message and quit program
     print("Not all have what it takes to be a hero. Goodbye")
-    quit()
+    sys.exit()
 else:
     # If neither "yes" or "no", print invalid answer message
     print("Invalid answer. Try again running the program again.")
