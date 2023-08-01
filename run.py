@@ -90,7 +90,8 @@ def stage_three():
         if weapon == "sword":
             print("Game over. Bandits weild daggers. You get sliced.")
         elif weapon == "bow":
-            print("Victory! A bow with arrows are effective agansit bandits! Move forward hero!\n")
+            print("Victory! A bow with arrows are effective agansit bandits!")
+            print(" Move forward hero!")
         elif weapon == "staff":
             print("Game over. Bandits weild daggers. You get sliced.")
             return
@@ -103,33 +104,46 @@ def stage_three():
 
 
 def crossroads():
-    go = input("You come to a cross roads mid way up Forbidden Mountain, do you go back for more glory? Go right to rest at the Inn? Or go forward to more difficult battles? [back, right, forward]\n")
+    print("You come to a cross roads mid way up Forbidden Mountain.")
+    print("Do you go back for more glory?")
+    print("Go right to rest at the Inn?")
+    print("Or go forward to more difficult battles?")
+    go = input("[back, right, forward]\n")
     if go == "back":
-        print("You go back./n")
+        print("You go back.")
         stage_three()
 
     elif go == "rest":
         print("You decided to rest at an Inn.")
         Inn()
 
-    elif go =="forward":
-        print("The difficulty has just gotten harder hero, multiple groups of enemies joined together are ahead. Choose the effective weapons for each attack wisely.\n")
+    elif go == "forward":
+        print("The difficulty has just gotten harder hero.")
+        print("Multiple groups of enemies joined together are ahead.)
+        print("Choose the effective weapons for each attack wisely.")
         stage_four()
 
 
 def inn():
     try:
-        decide = input("You arrive at an Inn. After a hard days battle, will you rest? Look at the training manual? Or leave? [rest/look/leave]\n")
+        print("You arrive at an Inn after a hard days battle.")
+        print("Will you rest?")
+        print("Will you look at the training manual?")
+        print("Or will you leave?")
+        decide = input("[rest/look/leave]\n")
         if decide == "rest":
-            print("You sleep through the night and wake up well replenished./n")
+            print("You sleep through the night and wake up well replenished.")
         elif decide == "look":
-            print("You open up the training manual to refresh your battle strategy.")
+            print("You open up the training manual to refresh battle plans.")
             print("Sword: effective aganist orcs who weild hammers.")
-            print ("Bow: effective agansit bandits who weild daggers.")
+            print("Bow: effective agansit bandits who weild daggers.")
             print("Staff: effective agansit trolls who weild spears./n")
         elif decide == "leave":
-            print("You leave the Inn. The difficulty has just gotten harder hero, multiple groups of enemies joined together are ahead. Choose the effective weapons for each attack wisely.\n")
+            print("The difficulty has just gotten harder hero.")
+            print("Multiple groups of enemies joined together are ahead.)
+            print("Choose the effective weapons for each attack wisely.")
             stage_four()
+
         else:
             raise ValueError
 
@@ -141,9 +155,11 @@ def inn():
 def stage_four():
     print("You encounter a group of bandits and trolls.")
     print("They trolls first attack, then the bandits.")
-    print("What order of weapons do you use? \n")
+    print("What order of weapons do you use?")
     try:
-        weapon = input("[sword then staff/ staff then sword/ sword then bow/ bow then sword / staff then bow / bow then staff?]\n")
+        weapon = input("[sword then staff/ staff then sword]\n")
+        weapon = input("[sword then bow/ bow then sword]\n")
+        weapon = input("[staff then bow / bow then staff?]\n")
 
         if weapon == "sword then staff":
             print("Defeat. Return to the Inn.")
@@ -163,7 +179,6 @@ def stage_four():
         elif weapon == "bow then staff":
             print("Defeat. Return to the Inn.")
             inn()
-            
         else:
             raise ValueError
 
@@ -177,7 +192,9 @@ def stage_five():
     print("They orcs first attack, then the trolls.")
     print("What order of weapons do you use? \n")
     try:
-        weapon = input("[sword then staff/ staff then sword/ sword then bow/ bow then sword / staff then bow / bow then staff?]\n")
+        weapon = input("[sword then staff/ staff then sword]\n")
+        weapon = input("[sword then bow/ bow then sword]\n")
+        weapon = input("[staff then bow / bow then staff?]\n")
 
         if weapon == "sword then staff":
             print("Victory! Move forward hero!\n")
@@ -197,7 +214,6 @@ def stage_five():
         elif weapon == "bow then staff":
             print("Defeat. Return to the Inn.")
             inn()
-            
         else:
             raise ValueError
 
@@ -211,7 +227,9 @@ def stage_six():
     print("They bandits first attack, then the orcs.")
     print("What order of weapons do you use? \n")
     try:
-        weapon = input("[sword then staff/ staff then sword/ sword then bow/ bow then sword / staff then bow / bow then staff?]\n")
+        weapon = input("[sword then staff/ staff then sword]\n")
+        weapon = input("[sword then bow/ bow then sword]\n")
+        weapon = input("[staff then bow / bow then staff?]\n")
 
         if weapon == "sword then staff":
             print("Defeat. Return to the Inn.")
@@ -231,7 +249,6 @@ def stage_six():
         elif weapon == "bow then staff":
             print("Defeat. Return to the Inn.")
             inn()
-            
         else:
             raise ValueError
 
@@ -242,19 +259,23 @@ def stage_six():
 
 def mid_story():
     print(f"Well done hero {answer}!")
-    print("You succesfully made it to the top of Forbidden Mountain by deafting Arbitar's army on the way!")
-    print("Now you must defeat Arbitar!\n")
+    print("You have defeated Arbitar's army on the way!")
+    print("You successfully made it to the top of Forbidden Mountain")
+    print("Now you must defeat Arbitar!")
     print(f"Arbitar: A hero named {answer} has come to challenge me?!")
     print("Hahaha do not make me laugh!")
-    print("With the Sword of the Ancients I can easily shapeshift my weapon to any of my choosing!")
+    print("With the Sword of the Ancients I can easily shapeshift my weapon!")
     print("Prepare to taste my blade!")
     stage_seven()
 
 
 def stage_seven():
-    print("Arbitar releases a relentless flurry of attacks! All your expeience has amounted to this battle! Choose wisely hero!")
+    print("Arbitar releases a relentless flurry of attacks!")
+    print("All your experience has amounted to this battle!")
     try:
-        weapon = input("Arbitar attacks in the form of a dagger, what weapon do you use? [sword, bow or staff]\n")
+        print("Arbitar attacks in the form of a dagger!")
+        print("What weapon do you use?")
+        weapon = input("[sword, bow or staff]\n")
 
         if weapon == "sword":
             print("Wrong move! You are defeated! Return to the Inn.")
@@ -275,7 +296,9 @@ def stage_seven():
 
 def stage_eight():
     try:
-        weapon = input("Arbitar attacks in the form of a spear, what weapon do you use? [sword, bow or staff]\n")
+        print("Arbitar attacks in the form of a spear!")
+        print("What weapon do you use?")
+        weapon = input("[sword, bow or staff]\n")
 
         if weapon == "sword":
             print("Wrong move! You are defeated! Return to the Inn.")
@@ -296,8 +319,9 @@ def stage_eight():
 
 def stage_nine():
     try:
-        weapon = input("Arbitar attacks in the form of a hammer, what weapon do you use? [sword, bow or staff]\n")
-
+        print("Arbitar attacks in the form of a hammer!")
+        print("What weapon do you use?")
+        weapon = input("[sword, bow or staff]\n")
         if weapon == "sword":
             print("Correct move! Arbitar is defeated!")
             final_story()
@@ -316,30 +340,37 @@ def stage_nine():
 
 
 def final_story():
-    print("Arbitar: How can this be? A new champion has emerged! Have mercy on me champion of Albion!")
-    print("You have a moral decision now to make hero. Do you swing the final blow and rid Albion of Arbitar?")
+    print("Arbitar: How can this be? A new champion has emerged!")
+    print("Have mercy on me O' Champion of Albion!")
+    print("You have a moral decision now to make hero.")
+    print("Do you swing the final blow and rid Albion of Arbitar?")
     print("Or do you have mercy and let him live?")
 
     try:
-        action = input ("[final blow/ have mercy]\n")
+        action = input("[final blow/ have mercy]\n")
 
         if action == "final blow":
-            print("You have taken the more sinister way by executing Arbitar, darkness has entered your heart.")
-            print("You steal the Sword of the Ancients for yourself but cannot control its power.")
-            print("You take your final breath and lose the right to be known as a champion of Albian. You lose. Game over")
+            print("You have taken the more sinister way by executing Arbitar.")
+            print("Darkness has entered your heart.")
+            print("You steal the Sword of the Ancients for yourself.")
+            print("Its power is too much for you to control.")
+            print("You lose the right to be known as a champion of Albian.")
+            print("You take your final breath.")
+            print("You lose. Game over.")
         elif action == "have mercy":
-            print("You have banished Arbitar and showed kindness.")
-            print("Now because you are not corrupted by bloodshed, you can rightfully restore the Sword of the Ancients.")
-            print("Congratulations champion of Albian!")
-            print("The land is a safe place to dwell again and the reputation of The Hero's Guild has been restored. Game won!")
+            print("You have banished Arbitar and showed kindness!")
+            print("Now because you are not corrupted by vengence")
+            print("You can rightfully restore the Sword of the Ancients!")
+            print("Congratulations Champion of Albian!")
+            print("The land is a safe place to dwell again!")
+            print("The reputation of The Hero's Guild has been restored!")
+            print("Game won!")
         else:
             raise ValueError
-    
     except ValueError:
         print("Invalid answer. Try again!")
         final_story()
 
-    
 
 # Welcome message
 print("Welcome to Fable Quest, an adventure text based game.")
@@ -349,10 +380,10 @@ print("Would you like to play? [yes/no]")
 # Prompt user input
 answer = input("> ")
 
-if(answer.lower().strip() == "yes"):
+if (answer.lower().strip() == "yes"):
     # If "yes", prompt user for name
-   answer = input('Noble choice! What is your name hero?\n')
-elif(answer == "no"):
+    answer = input('Noble choice! What is your name hero?\n')
+elif (answer == "no"):
     # If "no", print goodbye message and quit program
     print("Not all have what it takes to be a hero. Goodbye")
     quit()
@@ -360,7 +391,7 @@ else:
     # If neither "yes" or "no", print invalid answer message
     print("Invalid answer. Try again running the program again.")
     quit()
-    ### All answer input outcomes have been tested to ensure user experience
+    # All answer input outcomes have been tested to ensure user experience
 
 try:
     if answer == "":
@@ -372,20 +403,24 @@ except ValueError:
     print("The mysterious type, ey? OK, I'll call you Flynn!")
     answer == 'Flynn'
 finally:
-    # finally keyword exceutes the program regardless if there's an error or not
+    # finally keyword runs the program regardless if there's an error or not
 
     # Background story with the usage of an f-string for the user's name
     print("Long ago in the land of Albion a hero once held in high honor")
     print("who desired more power and was drawn to the dark side.")
-    print("This fallen hero known as Arbitar went to Forbidden Mountain")
-    print("and removed the Sword of the Ancients by defeating the order known as The Hero's Guild.")
-    print("Through Arbitar's actions he released the creatures of havoc in the forms of orcs and trolls.")
-    print("Arbitar has set up camp all the way to the top of Forbidden Mountain.")
+    print("This fallen hero known as Arbitar went to Forbidden Mountain.")
+    print("Arbitar defeated the order known as The Hero's Guild")
+    print("and removed the Sword of the Ancients.")
+    print("Through Arbitar's actions he released")
+    print("The creatures of havoc in the forms of orcs and trolls.")
+    print("Arbitar has set up camp at the top of Forbidden Mountain.")
     print(f"Now you hero {answer}, must defeat Arbitar's army")
-    print("of bandits, orcs and trolls and restore the Sword of the Ancients back to its rightful place.")
-    print("Choose your path wisely hero.\n")
+    print("Of bandits, orcs and trolls")
+    print("To restore the Sword of the Ancients back to its rightful place.")
+    print("Choose your path wisely hero.")
 
-print("Would you like to train at The Hero's Guild before leaving for your conquest? [yes/no]")
+print("Would you like to train at The Hero's Guild")
+print("Before leaving for your conquest? [yes/no]")
 choice = input("> ")
 training()
 stage_one()
