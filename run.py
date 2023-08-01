@@ -3,79 +3,8 @@ import sys
 # Global varibales defined
 name = ""
 weapon = ""
-choice = ""
-answer = ""
 
 # Functions go on outer level to later be called upon
-def main():
-        # All other functions are nested in main()
-        # Welcome message
-        print("Welcome to Fable Quest, an adventure text based game.")
-        print("To win, you must select the correct weapons to use.")
-        print("Would you like to play? [yes/no]")
-
-        # Prompt user input
-        answer = input("> ")
-
-        if (answer.lower().strip() == "yes"):
-            # If "yes", prompt user for name
-            answer = input('Noble choice! What is your name hero?\n')
-        elif (answer == "no"):
-            # If "no", print goodbye message and quit program
-            print("Not all have what it takes to be a hero. Goodbye")
-            sys.exit()
-        else:
-            # If neither "yes" or "no", print invalid answer message
-            print("Invalid answer. Try again running the program again.")
-            quit()
-            # All answer input outcomes have been tested to ensure user experience
-
-        try:
-            if answer == "":
-                # If user gives an empty string, I have assigned a default name
-                raise ValueError
-            else:
-                name == answer
-        except ValueError:
-            print("The mysterious type, ey? OK, I'll call you Flynn!")
-            answer == 'Flynn'
-        finally:
-            # finally keyword runs the program regardless if there's an error or not
-
-            # Background story with the usage of an f-string for the user's name
-            print("Long ago in the land of Albion a hero once held in high honor")
-            print("who desired more power and was drawn to the dark side.")
-            print("This fallen hero known as Arbitar went to Forbidden Mountain.")
-            print("Arbitar defeated the order known as The Hero's Guild")
-            print("and removed the Sword of the Ancients.")
-            print("Through Arbitar's actions he released")
-            print("The creatures of havoc in the forms of orcs and trolls.")
-            print("Arbitar has set up camp at the top of Forbidden Mountain.")
-            print(f"Now you hero {answer}, must defeat Arbitar's army")
-            print("Of bandits, orcs and trolls")
-            print("To restore the Sword of the Ancients back to its rightful place.")
-            print("Choose your path wisely hero.")
-
-        print("Would you like to train at The Hero's Guild")
-        print("Before leaving for your conquest? [yes/no]")
-        choice = input("> ")
-        training()
-        stage_one()
-        stage_two()
-        stage_three()
-        crossroads()
-        inn()
-        stage_four()
-        stage_five()
-        stage_six()
-        mid_story()
-        stage_seven()
-        stage_eight()
-        stage_nine()
-        final_story()
-        sys.exit()
-
-
 def training():
     if choice == "yes":
         weapon = ""
@@ -448,4 +377,68 @@ def final_story():
         final_story()
 
 
-main()
+# Welcome message
+print("Welcome to Fable Quest, an adventure text based game.")
+print("To win, you must select the correct weapons to use.")
+print("Would you like to play? [yes/no]")
+
+# Prompt user input
+answer = input("> ")
+
+if (answer.lower().strip() == "yes"):
+    # If "yes", prompt user for name
+    answer = input('Noble choice! What is your name hero?\n')
+elif (answer == "no"):
+    # If "no", print goodbye message and quit program
+    print("Not all have what it takes to be a hero. Goodbye")
+    sys.exit()
+else:
+    # If neither "yes" or "no", print invalid answer message
+    print("Invalid answer. Try again running the program again.")
+    quit()
+    # All answer input outcomes have been tested to ensure user experience
+
+try:
+    if answer == "":
+        # If user gives an empty string, I have assigned a default name
+        raise ValueError
+    else:
+        name == answer
+except ValueError:
+    print("The mysterious type, ey? OK, I'll call you Flynn!")
+    answer == 'Flynn'
+finally:
+    # finally keyword runs the program regardless if there's an error or not
+
+    # Background story with the usage of an f-string for the user's name
+    print("Long ago in the land of Albion a hero once held in high honor")
+    print("who desired more power and was drawn to the dark side.")
+    print("This fallen hero known as Arbitar went to Forbidden Mountain.")
+    print("Arbitar defeated the order known as The Hero's Guild")
+    print("and removed the Sword of the Ancients.")
+    print("Through Arbitar's actions he released")
+    print("The creatures of havoc in the forms of orcs and trolls.")
+    print("Arbitar has set up camp at the top of Forbidden Mountain.")
+    print(f"Now you hero {answer}, must defeat Arbitar's army")
+    print("Of bandits, orcs and trolls")
+    print("To restore the Sword of the Ancients back to its rightful place.")
+    print("Choose your path wisely hero.")
+
+print("Would you like to train at The Hero's Guild")
+print("Before leaving for your conquest? [yes/no]")
+choice = input("> ")
+training()
+stage_one()
+stage_two()
+stage_three()
+crossroads()
+inn()
+stage_four()
+stage_five()
+stage_six()
+mid_story()
+stage_seven()
+stage_eight()
+stage_nine()
+final_story()
+sys.exit()
