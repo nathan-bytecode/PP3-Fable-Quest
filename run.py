@@ -158,8 +158,8 @@ def stage_four():
     print("They trolls first attack, then the bandits.")
     print("What order of weapons do you use?")
     print("[sword then staff/ staff then sword]")
-    print("[sword then bow/ bow then sword]")
-    print("[staff then bow / bow then staff]")
+    print("[sword then bow/bow then sword]")
+    print("[staff then bow/bow then staff]")
     try:
         weapon = input("\n")
 
@@ -200,7 +200,7 @@ def stage_five():
         weapon = input("\n")
 
         if weapon == "sword then staff":
-            print("Victory! Move forward hero!\n")
+            print("Victory! Move forward hero!")
             stage_six()
         elif weapon == "staff then sword":
             print("Defeat. Return to the Inn.")
