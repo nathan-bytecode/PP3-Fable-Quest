@@ -36,23 +36,15 @@ bow_art = """
 """
 staff_art = """   
         (Staff: effective agansit trolls who wield spears.)
-           /\
-          //\\
-         //  \\
-     ^   \\  //   ^
-    / \   )  (   / \
-    ) (   )  (   ) (
-    \  \_/ /\ \_/  /
-     \__  _)(_  __/
-        \ \  / /
-         ) \/ (
-         | /\ |
-         | )( |
-         | )( |
-         | \/ |
-         )____(
-        /      \
-        \______/
+   /\
+  \II/
+(88II88)
+  /II\
+   II
+   II
+   II
+   II
+   \/
 """
 troll_art = """   
         (Troll)
