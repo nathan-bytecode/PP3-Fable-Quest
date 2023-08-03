@@ -1,32 +1,42 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Fable Quest
 
-Welcome,
+## A Python text based command line game.
+This application is a Python adventure text game. The game asks the users input if they would like to play and then the story of the game starts. This game is won by the user's input of selecting the right answers ie weapons.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+### - By Nathan Nicholson
 
-## Reminders
+[Live site](https://fable-quest-bab5245d5c1f.herokuapp.com/)
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+[Repository](https://github.com/nathan-bytecode/fable-quest)
 
-## Creating the Heroku app
+## Table of Contents
+1.Pre-project Planning
+2.Features Left to Implement
+3.Technologies Used
+4.Testing
+5.Bugs
+6.Deployment
+7.Credits
+8.Content
+9.Acknowledgements
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Flow
+### Pre-project Planning
+For project 3 I decided to make an adventure text based game in Python using the command line. 
 
-1. `heroku/python`
-2. `heroku/nodejs`
+Once I decided this I typed the story out on windows notepad and within the layout of the story the process of if else statements nested within eachother began to become clear to follow.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+![Notepad Screenshot](/assets/images/notepad1.png)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+## Game-Flow
+### Start-up
+When the user loads the application they are met with the following.
+![Start-up](/assets/images/start-up.png)
 
-Connect your GitHub repository and deploy as normal.
+### Beginning story
+If the user types "yes", they are asked to enter their name and so the story begins. If the user chooses not to enter any name, a default name is provided.
+![Beginning story](/assets/images/beginning-story.png)
 
-## Constraints
+If the user types "no", a goodbye message is displayed.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+### Training function
