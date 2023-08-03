@@ -6,21 +6,15 @@ import pyfiglet
 name = ""
 weapon = ""
 # ASCII Art
-sword_art = """     (Sword)                            ___
-                                                      |_  |
-                                                        | |
-__                      ____                            | |
-\ ````''''----....____.'\   ````''''--------------------| |--.               _____      .-.
- :.                      `-._                           | |   `''-----''''```     ``''|`: :|
-  '::.                       `'--.._____________________| |                           | : :|
-    '::..       ----....._______________________________| |                           | : :|
-      `'-::...__________________________________________| |   .-''-..-'`-..-'`-..-''-.cjr :|
-           ```'''---------------------------------------| |--'                         `'-'
-                                                        | |
-                                                       _| |
-                                                      |___| cjr
+sword_art = """     
+        (Sword)
+         />_________________________________
+[########[]_________________________________>
+         \>
+
 """
-bow_art = """        (Bow and arrow)                           
+bow_art = """        
+        (Bow and arrow)                           
            4   ".                                        
            4    ^.                                       
            4     $                                       
@@ -40,26 +34,28 @@ bow_art = """        (Bow and arrow)
            J.                                            
           '$$    
 """
-staff_art = """   (Staff)
-       /\
-      //\\
-     //  \\
- ^   \\  //   ^
-/ \   )  (   / \
-) (   )  (   ) (
-\  \_/ /\ \_/  /
- \__  _)(_  __/
-    \ \  / /
-     ) \/ (
-     | /\ |
-     | )( |
-     | )( |
-     | \/ |
-     )____(
-    /      \
-    \______/
+staff_art = """   
+        (Staff)
+           /\
+          //\\
+         //  \\
+     ^   \\  //   ^
+    / \   )  (   / \
+    ) (   )  (   ) (
+    \  \_/ /\ \_/  /
+     \__  _)(_  __/
+        \ \  / /
+         ) \/ (
+         | /\ |
+         | )( |
+         | )( |
+         | \/ |
+         )____(
+        /      \
+        \______/
 """
-bandits_art = """   (Bandit)
+bandits_art = """   
+        (Bandit)
          /\______  __
         /-~     ,^~ / __n
        / ,---x /_.-"L/__,\
@@ -76,7 +72,8 @@ bandits_art = """   (Bandit)
     o~_//)             (_\\_~o
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
-orcs_art = """    (Orc)
+orcs_art = """    
+        (Orc)
         _____
     .-,;='';_),-.
      \_\(),()/_/
@@ -88,7 +85,8 @@ orcs_art = """    (Orc)
        /  |  \
        """ """ 
 """
-trolls_art = """    (Troll)
+trolls_art = """    
+       (Troll)
       __ __
    .-',,^,,'.
   / \(0)(0)/ \
@@ -103,7 +101,7 @@ snd  \_,_>-'
 """
 
 sword_of_ancients = """
-/     _____________________|(Sword of the Ancients)|________)
+/     __|(Sword of the Ancients)|__)
 |     |
 |     |                               /\ 
 |     |                              / |\
@@ -142,7 +140,8 @@ sword_of_ancients = """
  \__________________________________________________________| |________) 
 """
 
-inn_art = """                 (Inn)
+inn_art = """                 
+         (Inn)
                                    /\
                               /\  //\\
                        /\    //\\///\\\        /\
@@ -160,7 +159,8 @@ inn_art = """                 (Inn)
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 """
 
-arbitar_art = """  (Arbitar)
+arbitar_art = """  
+         (Arbitar)
                       .
                   _._ |`,
                 .'\  `"*-.
@@ -206,7 +206,8 @@ arbitar_art = """  (Arbitar)
 
 hero_art = """
  
-              (Champion)
+        (Champion)
+            
                _______
          ..-'`       ````---.
        .'          ___ .'````.'SS'.
@@ -368,6 +369,7 @@ def crossroads():
 def inn():
     try:
         print("You arrive at an Inn after a hard days battle.")
+        print(inn_art)
         print("Will you rest?")
         print("Will you look at the training manual?")
         print("Or will you leave?")
