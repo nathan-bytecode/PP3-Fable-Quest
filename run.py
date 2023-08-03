@@ -54,25 +54,23 @@ staff_art = """
         /      \
         \______/
 """
-bandits_art = """   
+troll_art = """   
         (Bandit)
-             /\______  __
-            /-~     ,^~ / __n
-           / ,---x /_.-"L/__,\
-          /-".---.\_.-'/!"  \ \
-          0\/0___/   x' /    ) |
-          \.______.-'_.{__.-"_.^
-           `x____,.-",-~( .-"
-              _.-| ,^.-~ "\
-         __.-~_,-|/\/     `i
-        / u.-~ .-{\/     .-^--.
-        \/   v~ ,-^x.____}--r |
-            / /"            | |       
-          _/_/              !_l_
-        o~_//)             (_\\_~o
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           \\\|||///
+         .  ======= 
+        / \| O   O |
+        \ / \`___'/ 
+         #   _| |_
+        (#) (     )  
+         #\//|* *|\\ 
+         #\/(  *  )/   
+         #   =====  
+         #   (   ) 
+         #   || ||
+        .#---'| |`----.
+        `#----' `-----'
 """
-orcs_art = """    
+bandit_art = """    
         (Orc)
         _____
     .-,;='';_),-.
@@ -85,19 +83,20 @@ orcs_art = """
        /  |  \
        """ """ 
 """
-trolls_art = """    
+orc_art = """    
        (Troll)
-          __ __
-       .-',,^,,'.
-      / \(0)(0)/ \
-      )/( ,_"_,)\(
-     `  >-`~(   ' 
-    _N\ |(`\ |___
-    \' |/ \ \/_-,)
-     '.(  \`\_<
-        \ _\|
-         | |_\_
-        \_,_>-' 
+
+           ."`".
+       .-./ _=_ \.-.
+      {  (,(oYo),) }}
+      {{ |   "   |} }
+      { { \(---)/  }}
+      {{  }'-=-'{ } }
+      { { }._:_.{  }}
+      {{  } -:- { } }
+jgs   {_{ }`===`{  _}
+     ((((\)     (/))))
+
 """
 
 sword_of_ancients = """
@@ -275,7 +274,7 @@ def training():
 def stage_one():
     try:
         print("You encounter a group of orcs.")
-        print(orcs_art)
+        print(orc_art)
         print("What weapon do you use?")
         weapon = input("[sword/bow/staff]\n")
 
@@ -298,7 +297,7 @@ def stage_one():
 def stage_two():
     try:
         print("You encounter a group of trolls.")
-        print(trolls_art)
+        print(troll_art)
         print("What weapon do you use?")
         weapon = input("[sword/bow/staff]\n")
 
@@ -321,7 +320,7 @@ def stage_two():
 def stage_three():
     try:
         print("You encounter a group of bandits.")
-        print(bandits_art)
+        print(bandit_art)
         print("What weapon do you use?")
         weapon = input("[sword/bow/staff]\n")
 
