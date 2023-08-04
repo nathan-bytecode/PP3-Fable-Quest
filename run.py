@@ -316,9 +316,12 @@ def stage_four():
     print("You encounter a group of bandits and trolls.")
     print("They trolls first attack, then the bandits.")
     print("What order of weapons do you use?")
-    print("[sword then staff/ staff then sword]")
-    print("[sword then bow/bow then sword]")
-    print("[staff then bow/bow then staff]")
+    print("[sword then staff]")
+    print("[staff then sword]")
+    print("[sword then bow]")
+    print("[bow then sword]")
+    print("[staff then bow]")
+    print("[bow then staff]")
     try:
         weapon = input("\n")
 
@@ -352,9 +355,12 @@ def stage_five():
     print("You encounter a group of orcs and trolls.")
     print("They orcs first attack, then the trolls.")
     print("What order of weapons do you use? \n")
-    print("[sword then staff/staff then sword]")
-    print("[sword then bow/bow then sword]")
-    print("[staff then bow/bow then staff]")
+    print("[sword then staff]")
+    print("[staff then sword]")
+    print("[sword then bow]")
+    print("[bow then sword]")
+    print("[staff then bow]")
+    print("[bow then staff]")
     try:
         weapon = input("\n")
 
@@ -388,9 +394,12 @@ def stage_six():
     print("You encounter a group of bandits and orcs.")
     print("They bandits first attack, then the orcs.")
     print("What order of weapons do you use? \n")
-    print("[sword then staff/staff then sword]")
-    print("[sword then bow/bow then sword]")
-    print("[staff then bow/bow then staff]")
+    print("[sword then staff]")
+    print("[staff then sword]")
+    print("[sword then bow]")
+    print("[bow then sword]")
+    print("[staff then bow]")
+    print("[bow then staff]")
     try:
         weapon = input("\n")
 
