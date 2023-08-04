@@ -531,6 +531,7 @@ def final_story():
             print("You lose the right to be known as a champion of Albian.")
             print("You take your final breath.")
             print("You lose. Game over.")
+            sys.exit()
         elif action == "have mercy":
             print("You have banished Arbitar and showed kindness!")
             print("Now because you are not corrupted by vengence")

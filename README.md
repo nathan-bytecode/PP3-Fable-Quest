@@ -138,7 +138,9 @@ To check if my formatting was approved.
 
 - I identified a bug with a never ending "Invalid answer. Try again" message in one of the functions. Thanks to Stackflow and YouTube, I resolved this.
 
-- I identified a bug at the end when the game is won, it does not recognise the sys.exit() function and asks the user to battle again. I ran out of time to fix this.
+- I identified a bug at the end when the game is lost,  the user is returned to the Inn. I fixed this.
+
+- Not really a bug as much as it is a user expeirence, but I would have liked to find out how to clear the terminal after each action to keep things clear and clean.
 
 
 ## Deployment
