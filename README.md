@@ -132,3 +132,60 @@ Used as platform for IDE.
 
 ### Git
 Used to record version control.
+
+## Testing
+### Google Sheets
+For testing I did a manual checklist through Google Sheets.
+![Testing one](/assets/images/testing-one.png)
+![Testing two](/assets/images/testing-two.png)
+![Testing three](/assets/images/testing-three.png)
+
+### Python Linter Code
+To check if my formatting was approved.
+![Linter](/assets/images/Python%20Linter%20Code%20Formatting%20test.png)
+
+## Bugs
+I identified a bug with the ASCII Art image display of the staff. No matter what I could not seem to adjust it correctly.
+
+I identifed a bug with a never ending "Invalid answer. Try again" message in one of the functions. Thanks to Stackflow and YouTube, I resolved this.
+
+
+## Deployment
+Navigate to heroku.com & log in.
+
+Click "new" and create a new App.
+
+Give the application a name and then choose your region and Click "Create app".
+
+On the next page click on the Settings tab to adjust the settings.
+
+Click on the 'config vars' button.
+
+Supply a KEY of PORT and it's value of 8000. Then click on the "add" button.
+
+Buildpacks now need to be added.
+
+These install future dependancies that we need outside of the requirements file.
+
+Select Python first and then node.js and click save.
+
+Make sure they are in this order.
+
+Then go to the deploy section and choose your deployment method.
+
+To connect with github select github and confirm.
+
+Search for your repository select it and click connect.
+
+You can choose to either deploy using automatic deploys which means heroku will rebuild the app everytime you push your changes.
+
+For this option choose the branch to deploy and click enable automatic deploys.
+
+This can be changed at a later date to manual.
+
+Manual deployment deploys the current state of a branch.
+
+Click deploy branch.
+
+We can now click on the open App button above to view our application.
+
