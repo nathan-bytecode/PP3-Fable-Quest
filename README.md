@@ -24,8 +24,9 @@ This application is a Python adventure text game. The game asks the users input 
 ### Pre-project Planning
 For project 3 I decided to make an adventure text based game in Python using the command line. 
 
-Once I decided this I typed the story out on windows notepad and within the layout of the story the process of if else statements nested within eachother began to become clear to follow.
+Once I decided this I typed the story out on windows notepad and within the layout of the story the process of if else statements nested within eachother began to become clear to follow. The game flow is controlled by processing through a total of fourteen functions.
 
+(This is only one notepad print screen, I did not include them all here as I found it would seem like similiar repeated information which would give a bad readme experience.)
 ![Notepad Screenshot](/assets/images/notepad1.png)
 
 ## Game-Flow
@@ -79,5 +80,28 @@ If the player at the crossroads inputs "forward", it takes them to stage four. S
 If during the crossroads decision making, the player inputs "right", they arrive at the Inn scene. The Inn gives three options. Rest and leave options are abit decieving as the player just moves forward onto stage four. Look is the best option as it gives the player the chance to recite what weapons are effective towards which is very much needed for the harder stages to follow. 
 ![Inn](/assets/images/crossroads-right.png)
 
-Due to the difficulty increasing, the player is brought back to the Inn if they get defeated by selecting the wrong answers. So the Inn is kind of like a mid-game checkpoint. If the player is smart, they should now revise the triaing manual.
+Due to the difficulty increasing, the player is brought back to the Inn if they get defeated by selecting the wrong answers. So the Inn is kind of like a mid-game checkpoint. If the player is smart, they should now revise the trianing manual.
 ![Stage Four defeat](/assets/images/stagefour-defeat-inn-look.png)
+
+### Stage Four function
+As mentioned above the stages have becoming more difficult. If defeated the player returns to the Inn. If successful, the player moves on to stage five. Here's an example of a typo which is implemented for all stages.
+![Stage Four invalid answer](/assets/images/stagefour-invalid-answer.png)
+
+### Stages Five and Six functions
+Here's a print screen of stage five and six as the user progresses successfully.
+![Stage Five and Six](/assets/images/stagefive-stagesix.png)
+
+### Mid-story function
+As the player succeeds through all three stages of stage four to six, they are met with a mid-story scene. A dialogue from the game's villian Arbitar is disclosed along with the character's ASCII Art.
+![Arbitar](/assets/images/midstory.png)
+
+### Stages Seven, Eight and Nine functions
+The game's strategy takes a slight shift. As the final boss Arbitar attacks with weapons which were previously used by different enemy encounters. This will challenge the player to recall what each previous opposition used as a weapon rather than the player focusing on weather the enemy was a orc, troll, or bandit. If the player is consistenly correct in all three moves, Arbitar is defeated.
+![Boss fight](/assets/images/stageseven-stageeight-stagenine.png)
+
+### Final Story function
+If the player is victorious against Arbitar a final story concludes and the player is met with a final moral decision to make. The "have mercy" input leads to the game being won.
+![Have Mercy decision](/assets/images/finalstory-victory.png)
+
+If the player decides to input "final blow", it's actually the wrong move and therefore they lose the game.
+![Final blow decision](/assets/images/finalstory-defeat.png)

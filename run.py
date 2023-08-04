@@ -1,11 +1,11 @@
-# Importing the libary
+# Importing libaries
 import sys
 import pyfiglet
 
 # Global varibales defined
 name = ""
 weapon = ""
-# ASCII Art
+# ASCII Art 
 sword_art = """     
         (Sword: effective aganist orcs who wield hammers.)
          />_________________________________
