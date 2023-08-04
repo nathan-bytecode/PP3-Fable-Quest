@@ -109,3 +109,26 @@ If the player is victorious against Arbitar a final story concludes and the play
 
 If the player decides to input "final blow", it's actually the wrong move and therefore they lose the game.
 ![Final blow decision](/assets/images/finalstory-defeat.png)
+
+## Features left to implement
+- I wanted to do some sort of hit points for the player. Example, "Wrong move hero, you just lost one hitpoint. You have four remaning"
+- I would have like to include at the Inn scene, if the user selects 'rest' that they get restored all of their hitpoints health.
+- I wanted to include after reaching the villian's camp at the top of Forbidden Mountain, they find a sheild which provides an extra bonus hitpoint.
+- I would have liked to include a timer and a how many attempts of correct and incorrect decisions were made by the player.
+- I would have like to include an option to save the player's record for furture game tries.
+
+## Technologies Used
+### Python
+Used to create the application.
+
+### Heroku
+Used to deploy and host the app.
+
+### Github
+Used to display ReadMe file and store code.
+
+### Gitpod
+Used as platform for IDE.
+
+### Git
+Used to record version control.
