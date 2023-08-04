@@ -9,17 +9,6 @@ This application is a Python adventure text game. The game asks the users input 
 
 [Repository](https://github.com/nathan-bytecode/fable-quest)
 
-## Table of Contents
-1.Pre-project Planning
-2.Features Left to Implement
-3.Technologies Used
-4.Testing
-5.Bugs
-6.Deployment
-7.Credits
-8.Content
-9.Acknowledgements
-
 ## Flow
 ### Pre-project Planning
 For project 3 I decided to make an adventure text based game in Python using the command line. 
@@ -145,9 +134,11 @@ To check if my formatting was approved.
 ![Linter](/assets/images/Python%20Linter%20Code%20Formatting%20test.png)
 
 ## Bugs
-I identified a bug with the ASCII Art image display of the staff. No matter what I could not seem to adjust it correctly.
+- I identified a bug with the ASCII Art image display of the staff. No matter what I could not seem to adjust it correctly.
 
-I identifed a bug with a never ending "Invalid answer. Try again" message in one of the functions. Thanks to Stackflow and YouTube, I resolved this.
+- I identified a bug with a never ending "Invalid answer. Try again" message in one of the functions. Thanks to Stackflow and YouTube, I resolved this.
+
+- I identified a bug at the end when the game is won, it does not recognise the sys.exit() function and asks the user to battle again. I ran out of time to fix this.
 
 
 ## Deployment
