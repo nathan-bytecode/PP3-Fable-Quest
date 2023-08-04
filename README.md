@@ -99,6 +99,10 @@ As the player succeeds through all three stages of stage four to six, they are m
 The game's strategy takes a slight shift. As the final boss Arbitar attacks with weapons which were previously used by different enemy encounters. This will challenge the player to recall what each previous opposition used as a weapon rather than the player focusing on weather the enemy was a orc, troll, or bandit. If the player is consistenly correct in all three moves, Arbitar is defeated.
 ![Boss fight](/assets/images/stageseven-stageeight-stagenine.png)
 
+### Champion ASCII Art
+As Arbitar the villian is defeated, an ASCII Art of the player as a champion is displayed to celebrate their victory.
+![Champion](/assets/images/champion.png)
+
 ### Final Story function
 If the player is victorious against Arbitar a final story concludes and the player is met with a final moral decision to make. The "have mercy" input leads to the game being won.
 ![Have Mercy decision](/assets/images/finalstory-victory.png)
